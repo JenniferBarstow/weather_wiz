@@ -1,0 +1,65 @@
+Generating image variants require the image_processing gem. Please add `gem "image_processing", "~> 1.2"` to your Gemfile or set `config.active_storage.variant_processor = :disabled`.
+Started GET "/" for 151.101.1.227 at 2026-01-13 00:06:20 +0000
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WeatherController#index as HTML
+  Rendering weather/index.html.erb
+  Rendered weather/index.html.erb (Duration: 214.5ms | GC: 15.0ms)
+Completed 200 OK in 241ms (Views: 227.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 15.0ms)
+
+
+Started GET "/weather?address=1600+Amphitheatre+Pkwy%2C+Mountain+View%2C+CA+94043&commit=Get+Weather" for 151.101.1.227 at 2026-01-13 00:06:24 +0000
+Processing by WeatherController#index as HTML
+  Parameters: {"address" => "1600 Amphitheatre Pkwy, Mountain View, CA 94043", "commit" => "Get Weather"}
+Attempting to fetch coordinates for city/state: Mountain View, CA
+Attempting to fetch coordinates for city/zipcode: CA, 94043
+Fetching weather for coordinates: 49.1333, -113.6019
+Error fetching weather data: Unknown error
+  Rendering weather/index.html.erb
+  Rendered weather/index.html.erb (Duration: 9.1ms | GC: 1.5ms)
+Completed 200 OK in 815ms (Views: 10.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 7.6ms)
+
+
+Started GET "/weather?address=1600+Amphitheatre+Pkwy%2C+Mountain+View%2C+CA+94043&commit=Get+Weather" for 151.101.1.227 at 2026-01-13 00:07:46 +0000
+Processing by WeatherController#index as HTML
+  Parameters: {"address" => "1600 Amphitheatre Pkwy, Mountain View, CA 94043", "commit" => "Get Weather"}
+Attempting to fetch coordinates for city/state: Mountain View, CA
+Attempting to fetch coordinates for city/zipcode: CA, 94043
+Fetching weather for coordinates: 49.1333, -113.6019
+Error fetching weather data: Unknown error
+  Rendering weather/index.html.erb
+  Rendered weather/index.html.erb (Duration: 9.9ms | GC: 1.0ms)
+Completed 200 OK in 931ms (Views: 11.9ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.8ms)
+
+
+Started GET "/.well-known/appspecific/com.chrome.devtools.json" for 151.101.1.227 at 2026-01-13 00:07:54 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/.well-known/appspecific/com.chrome.devtools.json"):
+  
+Started GET "/assets/application-07b6f9e16df11533897a796687bf44b9f5cf4e9d535d5db45b522c3d1c84b87f.css" for 151.101.1.227 at 2026-01-13 00:07:54 +0000
+Started GET "/assets/application-172e81298c6b9b1cfabf182bae2afe7bb5aa9e676c0574311a8caf879f7d7ebd.js" for 151.101.1.227 at 2026-01-13 00:07:54 +0000
+Started GET "/weather?address=1600+Amphitheatre+Pkwy%2C+Mountain+View%2C+CA+94043&commit=Get+Weather" for 151.101.1.227 at 2026-01-13 00:10:00 +0000
+Processing by WeatherController#index as HTML
+  Parameters: {"address" => "1600 Amphitheatre Pkwy, Mountain View, CA 94043", "commit" => "Get Weather"}
+Attempting to fetch coordinates for city/state: Mountain View, CA
+Attempting to fetch coordinates for city/zipcode: CA, 94043
+Fetching weather for coordinates: 49.1333, -113.6019
+Error fetching weather data: Unknown error
+  Rendering weather/index.html.erb
+  Rendered weather/index.html.erb (Duration: 8.4ms | GC: 0.0ms)
+Completed 200 OK in 1222ms (Views: 10.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/weather?address=3249+West+Fairview+Place%2C+Denver%2C+CO%2C+80211&commit=Get+Weather" for 151.101.1.227 at 2026-01-13 00:10:04 +0000
+Processing by WeatherController#index as HTML
+  Parameters: {"address" => "3249 West Fairview Place, Denver, CO, 80211", "commit" => "Get Weather"}
+Attempting to fetch coordinates for city/state: Denver, CO
+Attempting to fetch coordinates for city/zipcode: , 80211
+Fetching weather for coordinates: 51.8591, 58.2214
+Error fetching weather data: Unknown error
+  Rendering weather/index.html.erb
+  Rendered weather/index.html.erb (Duration: 8.8ms | GC: 0.0ms)
+Completed 200 OK in 954ms (Views: 12.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.8ms)
+
+
